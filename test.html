@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW DD</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let correctAnswers = [false, true, true, false, false];
+            let correct = 0;
+
+            let q1 = confirm("JS это компилируемый язык?");
+            let q2 = confirm("Если в JS написать: \n let arr = [3][6]\nБудет ли считаться ошибкой?");
+            let q3 = confirm("Я получу хорошую оценку?");
+            let q4 = confirm("2 + 2 = 6?");
+            let q5 = confirm("JS изучаем на ООП?");
+
+            let answers = [q1, q2, q3, q4, q5];
+
+            for (let i = 0; i < answers.length; i++) {
+                if (answers[i] == correctAnswers[i]) {
+                    correct++;
+                }
+            }
+
+            if (correct === 5) {
+                alert("Вы отлично знаете JS!");
+                break;
+            } else if (correct == 4) {
+                alert("Есть одна ошибка, с кем не бывает?");
+                break;
+            } else if (correct == 3) {
+                alert("У вас две ошибки, но это неплохо.");
+                break;
+            } else if (correct == 2) {
+                alert("У вас много ошибок, надо подучиться.");
+                break;
+            } else if (correct == 1) {
+                alert("Вы смогли правильно ответить только один раз. Попробуйте пройти курс по JS.");
+            } else {
+                alert("Ни одного правильного ответа... Попробуйте ответить снова.");
+            }
+        }
+    </script>
+</body>
+
+</html>
